@@ -1,0 +1,189 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.review-form-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+      /* Styling the review form container */
+      .review-form {
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        width: 100%;
+        transition: all 0.3s ease-in-out;
+      }
+      .review-form:hover {
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+      }
+      .review-form h1{
+        font-weight: 900;
+        color: #045e9b;
+        font-size: 35px;
+      }
+  
+      /* Form headings and labels */
+      .review-form label {
+        display: block;
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+        color: #333;
+      }
+  
+      /* Input and Textarea styling */
+      .review-form input[type="text"],
+      .review-form input[type="email"],
+      .review-form textarea,
+      .review-form input[type="file"] {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 2px solid #9b59b6;
+        border-radius: 8px;
+        font-size: 1rem;
+        background: #f9f9f9;
+        transition: border-color 0.3s ease-in-out;
+      }
+  
+      .review-form input:focus,
+      .review-form textarea:focus {
+        border-color: #71b7e6;
+        outline: none;
+      }
+     
+
+
+      /* Wrapper for custom file input */
+.custom-file-input-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  /* Hide the default file input */
+  .custom-file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Custom label to replace the default button */
+  .custom-file-label {
+    padding: 12px 20px;
+    background-color: #71b7e6;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  /* Hover effect for the label */
+  .custom-file-label:hover {
+    background-color: #9b59b6;
+  }
+  
+  /* Display box for the selected file name */
+  .file-name-box {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #9b59b6;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .file-name {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom:0;
+  }
+  
+
+  
+      /* Star rating container */
+      .rating {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+  
+      /* Hide default radio buttons */
+      .rating input[type="radio"] {
+        display: none;
+      }
+  
+      /* Style stars */
+      .rating label {
+        font-size: 1.8rem;
+        color: #ccc;
+        cursor: pointer;
+        transition: color 0.2s ease-in-out;
+      }
+  
+      /* Change star color on hover */
+      .rating label:hover,
+      .rating label:hover ~ label,
+      .rating input[type="radio"]:checked ~ label {
+        color: #f39c12;
+      }
+  
+      /* Submit button styling */
+      .review-form #submit {
+        width: 100%;
+        padding: 14px;
+        background: linear-gradient(135deg, #9b59b6, #71b7e6);
+        border: none;
+        border-radius: 8px;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out, transform 0.2s;
+      }
+      .review-form #submit:hover {
+        background: linear-gradient(135deg, #71b7e6, #9b59b6);
+        transform: translateY(-2px);
+      }
+  
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .review-form {
+          padding: 30px;
+          margin: 10px;
+        }
+        .review-form label {
+          font-size: 1rem;
+        }
+        .review-form input[type="text"],
+        .review-form input[type="email"],
+        .review-form textarea {
+          font-size: 14px;
+        }
+      }
+  
+      @media (max-width: 480px) {
+        .review-form {
+          padding: 20px;
+          margin: 5px;
+        }
+        .review-form button {
+          padding: 15px;
+          font-size: 18px;
+        }
+      } 

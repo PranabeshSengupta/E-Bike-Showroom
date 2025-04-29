@@ -1,0 +1,191 @@
+
+/* Main container styling */
+.container {
+    max-width: 900px; /* Smaller container */
+    margin: 100px auto 50px auto; /* Fixed top space of 100px */
+    padding: 40px 60px; /* Inner padding */
+    background-color: #f9f9f9; /* Light background */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border-radius: 12px; /* Smooth corners */
+    border-left: 6px solid #3498db; /* Accent border on the left */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Gradient glow effect around the container */
+.container:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, #3498db, #1abc9c, #9b59b6);
+    filter: blur(20px); /* Glow effect */
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/* Hover effect on h2 (headings) */
+h2 {
+    margin-top: 20px;
+    font-size: 1.8rem;
+    color: #34495e;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease; /* Transition on hover */
+}
+
+h2:hover {
+    transform: translateX(10px); /* Moves heading slightly right */
+    color: #3498db; /* Changes color on hover */
+}
+
+/* Hover effect on paragraphs */
+p {
+    margin: 10px 0;
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: justify;
+    color: #555;
+    font-family: 'Roboto', sans-serif;
+    transition: transform 0.3s ease, color 0.3s ease; /* Transition on hover */
+}
+
+p:hover {
+    transform: translateY(-5px); /* Moves paragraph slightly up */
+    color: #3498db; /* Changes text color */
+}
+
+/* Heading 1 styling */
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    color: #2c3e50;
+    position: relative;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #3498db;
+    display: inline-block;
+}
+
+/* Custom accent hover effects */
+a {
+    color: #3498db;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #1abc9c;
+    text-decoration: none;
+}
+
+/* Divider between sections */
+.terms-content h2:not(:first-of-type) {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid #e5e5e5;
+}
+
+/* Adding background gradient to body */
+body {
+    background: linear-gradient(to right, #f1f1f1, #e3f2fd);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Add padding on the sides */
+.terms-content {
+    padding: 0 20px;
+}
+
+/* Media queries for responsiveness */
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 900px;
+        margin: 100px auto; /* Top space fixed */
+        padding: 40px 60px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 800px;
+        margin: 100px auto 50px auto; /* Top space fixed */
+        padding: 40px 50px;
+    }
+
+    h1 {
+        font-size: 2.3rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .container {
+        max-width: 700px;
+        margin: 100px auto 50px auto; /* Top space fixed */
+        padding: 30px 40px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    .container {
+        max-width: 90%;
+        margin: 100px auto 50px auto; /* Top space fixed */
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        max-width: 90%;
+        margin: 100px auto 50px auto; /* Top space fixed */
+        padding: 15px 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+}

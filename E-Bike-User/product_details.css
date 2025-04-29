@@ -1,0 +1,437 @@
+
+.product_images{
+    justify-content: center;
+    margin-bottom: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    min-width: 100%; 
+    transition: transform 0.5s ease-in-out; 
+    /* background-color: white; */
+    position: relative; 
+    /* border: 3px solid #024658; */
+    border-radius: 5px;
+    transition: ease-in-out 0.20s;
+}
+.product_images:hover{
+   transform: translate(0px,20px);
+
+}
+
+.buttons{
+    margin-bottom: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.buttons button{
+    margin: 10px;
+    padding: 10px 25px;
+    border: none;
+    font-size: 18px;
+    background: linear-gradient(45deg, #00d68f, #00a3a1);
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    transition: background 0.3s;
+}
+.buttons button:hover{
+    background: linear-gradient(45deg, #007a66, #006c77);
+}
+.product_images #img{
+    width: 550px;
+    border:3px solid #024658 ;
+    height: 400px;
+    margin: 0px 50px 50px 50px;
+    border-radius: 5px;
+    object-fit: contain;
+    transition: transform 0.5s ease-in-out;
+    background-color: white;
+    box-shadow: 0px 0px 7px #024658;
+}
+
+
+.products_details_heading {
+    margin-top: 70px; 
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: linear-gradient(135deg, #1cb5df, #024658);
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.products_details_heading h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.products_details_heading:hover {
+    transform: scale(1.05);
+}
+
+
+.products_details_table {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.products_details_table table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.products_details_table th,
+.products_details_table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.products_details_table th {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #1cb5df;
+    color: white;
+    text-transform: uppercase;
+}
+
+.products_details_table td {
+    font-size: 18px;
+}
+
+.products_details_table td:first-child {
+    background-color: #f9f9f9;
+    font-weight: bold;
+}
+
+.products_details_table th[colspan="2"] {
+    background-color: #024658;
+    color: #fff;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; 
+    max-width: 550px; 
+    margin: 0 auto; 
+   
+}
+
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out; 
+    width: 100%; 
+}
+
+  
+
+
+/* General form styling */
+form {
+    background-color: #fff; /* Light background for the form */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Shadow to lift the form */
+    max-width: 700px;
+    margin: 20px auto;
+    box-sizing: border-box;
+  }
+  
+  /* Styling for the input boxes and textarea */
+  input[type="text"], input[type="email"],input[type="number"], textarea {
+    width: 100%; /* Full-width for responsiveness */
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ddd; /* Initial light border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+    outline: none; /* Remove default outline */
+    background-color: #f9f9f9; /* Subtle background color */
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Darker font color for readability */
+  }
+  
+  /* Styling for input boxes on focus */
+  input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus ,textarea:focus {
+    border-color: #ff6347; /* Change border color on focus */
+    box-shadow: 0 4px 10px rgba(255, 99, 71, 0.3); /* Add soft shadow on focus */
+    background-color: #fff; /* White background when focused */
+  }
+  
+  /* Styling for the textarea */
+  textarea {
+    resize: none; /* Disable resizing for consistent appearance */
+    height: 120px; /* Set a default height */
+  }
+  
+  /* Additional styles for better spacing */
+  input[type="text"], input[type="email"],input[type="number"],textarea {
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+  }
+  
+  /* Placeholder text styling */
+  input::placeholder, textarea::placeholder {
+    color: #888; /* Subtle color for placeholder text */
+    font-style: italic; /* Make placeholder text italic */
+  }
+  
+  /* Transition on hover */
+  input[type="text"]:hover,input[type="number"]:hover, input[type="email"]:hover, textarea:hover {
+    border-color: #ff4500; /* Slightly darker border on hover */
+  }
+  
+  /* Styling the submit button within the form */
+  input[type="submit"] {
+    background-color: #ff6347;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #ff4500;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  input[type="submit"]:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Centering the comment button */
+  button {
+    display: block;
+    margin: 20px auto;
+    background-color: #ff6347;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    width: auto;
+    letter-spacing: 1px;
+  }
+  
+  button:hover {
+    background-color: #ff4500;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Styling text inside the form for better readability */
+  form h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  form label {
+    font-size: 16px;
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: inline-block;
+  }
+  
+  /* Media Queries for Full Responsiveness */
+  
+  /* Adjust form layout for smaller screens */
+  @media (max-width: 768px) {
+    form {
+      padding: 15px;
+      max-width: 90%;
+    }
+  
+    input[type="submit"] {
+      width: 100%;
+      font-size: 16px;
+      padding: 10px;
+    }
+  
+    form h2 {
+      font-size: 20px;
+    }
+  
+    input[type="text"], input[type="email"], textarea {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  
+  /* Further adjustments for very small screens */
+  @media (max-width: 480px) {
+    input[type="text"], input[type="email"], textarea {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    input[type="submit"], button {
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+  
+    form h2 {
+      font-size: 18px;
+    }
+  }
+  
+  
+
+/* #mylocation form {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  
+  #mylocation form input[type="text"],
+  #mylocation form input[type="email"],
+  #mylocation form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  #mylocation form input[type="submit"] {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #mylocation form input[type="submit"]:hover {
+    background-color: #ff4500;
+  } */
+
+
+
+@media screen and (max-width: 1500px) {
+    .products_details_heading {
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .products_details_heading {
+        margin: 100px 20px 50px 20px;
+    }
+
+    .products_details_heading h2 {
+        font-size: 32px;
+    }
+
+   
+    .products_details_table table {
+        width: 85%;
+    }
+
+    .product_images #img {
+        width: 100%; 
+        max-width: 600px; 
+        height: 500; 
+        margin: 0 20px; 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .products_details_heading {
+        margin: 80px 10px 30px 10px; 
+        padding: 15px;
+    }
+
+    .products_details_heading h2 {
+        font-size: 28px;
+    }
+
+  
+    .products_details_table table {
+        width: 90%; 
+    }
+
+    .products_details_table th {
+        font-size: 20px; 
+    }
+
+    .products_details_table td {
+        font-size: 16px; 
+    }
+
+    .product_images #img {
+        width: 90%;
+        max-width: 450px; 
+        height: 300; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .products_details_heading h2 {
+        font-size: 24px; 
+    }
+
+    .products_details_table th,
+    .products_details_table td {
+        padding: 10px;
+        font-size: 14px; 
+    }
+
+    .products_details_table table {
+        width: 95%; 
+    }
+
+
+    .product_images #img {
+        width: 100%; 
+        max-width: 300px; 
+        height: 250px; 
+        margin: 0 5px; 
+    }
+}
+
+
+
