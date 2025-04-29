@@ -1,0 +1,117 @@
+<?php
+include("connect.php");
+
+if (isset($_POST['submit'])) {
+   
+    if (!empty($_POST['model']) && !empty($_POST['price']) && !empty($_POST['range']) && isset($_FILES['image'])) {
+
+       
+        $model = mysqli_real_escape_string($conn, $_POST['model']);
+        $price = mysqli_real_escape_string($conn, $_POST['price']);
+        $range = mysqli_real_escape_string($conn, $_POST['range']);
+        $displacement = mysqli_real_escape_string($conn, $_POST['displacement']);
+        $top_speed = mysqli_real_escape_string($conn, $_POST['top_speed']);
+        $charging_time = mysqli_real_escape_string($conn, $_POST['charging_time']);
+        $weight_capacity = mysqli_real_escape_string($conn, $_POST['weight_capacity']);
+        $weight_vehicle = mysqli_real_escape_string($conn, $_POST['weight_vehicle']);
+        $smart_dashboard = mysqli_real_escape_string($conn, $_POST['smart_dashboard']);
+        $app_connectivity = mysqli_real_escape_string($conn, $_POST['app_connectivity']);
+        $safety_features = mysqli_real_escape_string($conn, $_POST['safety_features']);
+        $light = mysqli_real_escape_string($conn, $_POST['light']);
+        $service_1 = mysqli_real_escape_string($conn, $_POST['service_1']);
+        $service_2 = mysqli_real_escape_string($conn, $_POST['service_2']);
+        $service_3 = mysqli_real_escape_string($conn, $_POST['service_3']);
+
+       
+        function upload_image($file, $target_dir) {
+            $image_name = basename($file['name']);
+            $target_file = $target_dir . $image_name;
+            if (!is_dir($target_dir)) {
+                mkdir($target_dir, 0777, true); 
+            }
+            if (move_uploaded_file($file['tmp_name'], $target_file)) {
+                return $image_name;
+            } else {
+                return false;
+            }
+        }
+
+      
+        $image_folder = "C:\Users\Tahir\Desktop\php\htdocs\minor_project\uploads/";
+        $main_image = upload_image($_FILES['image'], $image_folder);
+        $gallery_image_1 = upload_image($_FILES['g_image_1'], $image_folder);
+        $gallery_image_2 = upload_image($_FILES['g_image_2'], $image_folder);
+        $gallery_image_3 = upload_image($_FILES['g_image_3'], $image_folder);
+        $gallery_image_4 = upload_image($_FILES['g_image_4'], $image_folder);
+        $gallery_image_5 = upload_image($_FILES['g_image_5'], $image_folder);
+
+        
+        if ($main_image && $gallery_image_1 && $gallery_image_2 && $gallery_image_3 && $gallery_image_4 && $gallery_image_5) {
+            
+            $sql = "INSERT INTO product (model, price, b_range, displacement, top_speed, charging_time, weight_capacity, weight_vehicle, smart_dashboard, app_connectivity, safety_features, light, 1st_service, 2nd_service, 3rd_service, b_image, g_image_1, g_image_2, g_image_3, g_image_4, g_image_5) 
+                    VALUES ('$model', '$price', '$range', '$displacement', '$top_speed', '$charging_time', '$weight_capacity', '$weight_vehicle', '$smart_dashboard', '$app_connectivity', '$safety_features', '$light', '$service_1', '$service_2', '$service_3', '$main_image', '$gallery_image_1', '$gallery_image_2', '$gallery_image_3', '$gallery_image_4', '$gallery_image_5')";
+
+           
+            if (mysqli_query($conn, $sql)) {
+                echo "<script>alert('Record inserted successfully');</script>";
+                ?>
+                <meta http-equiv = "refresh" content = "0; url = http://localhost/Diamond E-Bike Admin/add_scooty.html" />
+               <?php
+            } else {
+                echo "<script>alert('Sorry, the record could not be inserted. Please check your input.');</script>";
+                ?>
+                <meta http-equiv = "refresh" content = "0; url = http://localhost/Diamond E-Bike Admin/add_scooty.html" />
+               <?php
+            }
+        } else {
+            echo "<script>alert('Failed to upload one or more images. Please try again.');</script>";
+            ?>
+                <meta http-equiv = "refresh" content = "0; url = http://localhost/Diamond E-Bike Admin/add_scooty.html" />
+           <?php
+        }
+    } else {
+        echo "<script>alert('All fields are required. Please fill in all the details.');</script>";
+        ?>
+                <meta http-equiv = "refresh" content = "0; url = http://localhost/Diamond E-Bike Admin/add_scooty.html" />
+       <?php
+    }
+}
+
+
+mysqli_close($conn);
+?>
+
+
+<?php
+include("connect.php");
+
+// Get the video ID from the URL
+$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+
+if ($id) {
+    // Fetch the video path from the database
+    $sql = "SELECT p_video FROM video WHERE id = $id";
+    $result = mysqli_query($conn, $sql);
+
+    if ($result && mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        $videoPath = $row['p_video'];
+    } else {
+        echo "Video not found.";
+        exit;
+    }
+} else {
+    echo "Invalid video ID.";
+    exit;
+}
+
+// Close the database connection
+mysqli_close($conn);
+?>
+
+<div class="video-container">
+    <video controls>
+        <source src="<?php echo htmlspecialchars($videoPath); ?>" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>

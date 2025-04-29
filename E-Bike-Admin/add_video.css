@@ -1,0 +1,100 @@
+/* .container-1{
+  
+    background-color: rgb(253, 253, 253);
+    box-shadow: 0px 0px 2px black;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 60%;
+    padding: 15px;
+}
+.file-upload{
+    width: 50%;
+    padding: 15px;
+    margin: 0 auto;
+}
+.submit{
+    padding: 5px 15px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    background-color: #19bae2;
+} */
+
+
+/* Container styling */
+.container-1 {
+    background-color: rgb(253, 253, 253);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 500px;
+    padding: 25px;
+    text-align: center;
+}
+
+/* File upload styling */
+.file-upload {
+    position: relative;
+    width: 80%;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 5px;
+    color: #555;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.file-upload input[type="file"] {
+    opacity: 0;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.file-upload:hover {
+    background-color: #e1e1e1;
+}
+
+/* Display selected file name */
+#file-name {
+    font-size: 1rem;
+    color: #555;
+    padding: 10px;
+}
+
+/* Submit button styling */
+.submit {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    background-color: #19bae2;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit:hover {
+    background-color: #17a2c9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container-1 {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    .file-upload {
+        width: 100%;
+    }
+
+    .submit {
+        width: 100%;
+    }
+}

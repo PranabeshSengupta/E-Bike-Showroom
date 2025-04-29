@@ -1,0 +1,81 @@
+
+  .operations-header {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center align the items */
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    color: #ffffff; /* Set text color for better visibility */
+    padding: 10px; /* Add some padding */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.operations-header:hover {
+    background-color: #495057; /* Darker shade on hover */
+}
+
+.operations-header .menu-text {
+    margin-left: 10px; /* Space between icon and text */
+}
+
+.sidebar-collapsed .menu-text {
+    display: none; /* Hide text in collapsed state */
+}
+
+.sidebar-collapsed .operations-header .menu-text {
+    display: none; /* Hide text in collapsed state */
+}
+
+.sidebar-collapsed .operations-header .icon {
+    display: inline; /* Show icon in collapsed state */
+}
+
+.operations-menu .collapse-item {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center align the items */
+    color: #ffffff;
+    padding: 8px 10px; /* Adjusted padding for better spacing */
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    border-radius: 4px;
+    margin: 5px 0;
+}
+
+.operations-menu .collapse-item:hover {
+    color: #17a2b8;
+    background-color: #212529;
+    transform: translateX(5px);
+}
+
+.operations-menu .collapse-item:active {
+    color: #0dcaf0;
+    background-color: #212529;
+    font-weight: bold;
+}
+
+.operations-menu h6 {
+    font-weight: bold;
+    margin: 0; /* Reset margin */
+    padding: 10px; /* Add padding for separation */
+    color: #ffffff; /* Ensure header text is white */
+}
+
+.operations-menu {
+    padding: 15px; /* Adjusted padding for overall menu */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #343a40; /* Set a background color for the menu */
+}
+
+.menu-text {
+    display: inline-block; /* Changed to inline-block for better alignment */
+    margin-left: 10px;
+}
+
+.sidebar-collapsed .menu-text {
+    display: none; /* Hide text when sidebar is collapsed */
+}
+
+.sidebar-collapsed .icon {
+    display: inline; /* Show icons in collapsed state */
+}
